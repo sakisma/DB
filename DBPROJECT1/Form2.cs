@@ -15,6 +15,8 @@ namespace DBPROJECT1
         SqlConnection connect;
         SqlDataAdapter d1, d2, d3, d4;
         DataSet ds1, ds2, ds3, ds4;
+
+    
         BindingSource b1, b2, b3, b4;
         public Form2()
         {
@@ -23,10 +25,41 @@ namespace DBPROJECT1
             connect.Open();
             d1 = new SqlDataAdapter("Select * from PELATHS", connect);
             DataTable dt1 = new DataTable();
+            d1.Fill(dt1);
             comboBox1.DataSource = dt1;
             comboBox1.DisplayMember = "EPONYMIA";
              
         }
+
+        public void fillDataSet()
+        {
+            d2 = new SqlDataAdapter("Select EPONYMIA,AFM,EIDOS,KATHGORIA,TIMH_POLHSHS,FPA,POSOTHTA,TELIKH_TIMH" +
+                "from PELATHS inner join (PARAGELIA inner join PROIONTA_PARAGELIAS" +
+                "on PARAGELIA.KOD_PAR = PROIONTA_PARAGELIAS.K_PAR inner join APOTHIKI on PROIONTA_PARAGELIAS.K_E = APOTHIKI.KE)" +
+                "on PELATHS.KOD_PELATH = PARAGELIA.K_PEL" +
+                "WHERE EPONYMIA='" + comboBox1.Text.ToString()+ "'", connect);
+            ds2 = new DataSet();
+            b2 = new BindingSource();
+            d2.Fill(ds2);
+            DataTable dt = new DataTable();
+            dataGridView1.DataSource = ds2.Tables[0].DefaultView;
+            double sum = 0;
+            for(int i=0; i < dataGridView1.RowCount; i++)
+            {
+                double posotita = Convert.ToDouble(dataGridView1.Rows[i].Cells[6].Value);
+                double fpa = Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
+                double timi_polisis = Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value);
+                sum = timi_polisis * posotita * (fpa / 100);
+            }
+
+            label4.Text = Convert.ToString(sum);
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fillDataSet();
+        }
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
