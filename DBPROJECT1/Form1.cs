@@ -16,6 +16,35 @@ namespace DBPROJECT1
         SqlConnection conn;
         SqlDataAdapter da1, da2, da3, da4;
         DataSet ds1, ds2, ds3, ds4;
+        SqlCommandBuilder cmdbl;
+
+        private void SaveToolStripButton1_Click(object sender, EventArgs e)
+        {
+            cmdbl = new SqlCommandBuilder(da2);
+            da2.Update(ds2, "Paragelia_table");
+            MessageBox.Show("Information Updated");
+        }
+
+        private void SaveToolStripButton2_Click(object sender, EventArgs e)
+        {
+            cmdbl = new SqlCommandBuilder(da3);
+            da3.Update(ds3, "Apothiki_table");
+            MessageBox.Show("Information Updated");
+        }
+
+        private void SaveToolStripButton3_Click(object sender, EventArgs e)
+        {
+            cmdbl = new SqlCommandBuilder(da4);
+            da4.Update(ds4, "PROIONTA_PARAGELIAS_TABLE");
+            MessageBox.Show("Information Updated");
+        }
+
+        private void SaveToolStripButton_Click(object sender, EventArgs e)
+        {
+            cmdbl = new SqlCommandBuilder(da1);
+            da1.Update(ds1, "Pelaths_Table");
+            MessageBox.Show("Information Updated");
+        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
