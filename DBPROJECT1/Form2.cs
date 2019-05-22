@@ -63,9 +63,9 @@ namespace DBPROJECT1
             //SAVVA GAMIESAI
         }
 
-
         private void Form2_Load(object sender, EventArgs e)
         {
+            
         }
     }
 }
