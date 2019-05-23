@@ -46,15 +46,16 @@ namespace DBPROJECT1
             d2.Fill(ds2);
             DataTable dt = new DataTable();
             dataGridView1.DataSource = ds2.Tables[0].DefaultView;
-            double sum = 0;
-            for(int i=0; i < dataGridView1.Rows.Count; i++)
+            float sum = 0;
+            for(int i=0; i < dataGridView1.RowCount; i++)
             {
-                sum += Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value)*
-                       Convert.ToDouble(dataGridView1.Rows[i].Cells[6].Value) *
-                       Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
+                sum += Convert.ToSingle(dataGridView1.Rows[i].Cells[4].Value)+ 
+                       Convert.ToSingle(dataGridView1.Rows[i].Cells[4].Value)*
+                       (Convert.ToSingle(dataGridView1.Rows[i].Cells[6].Value)*
+                       Convert.ToSingle(dataGridView1.Rows[i].Cells[5].Value));
                 
             }
-            label4.Text = sum.ToString("F1");
+            label4.Text = sum.ToString();
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace DBPROJECT1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            fillDataSet();
         }
     }
 }
