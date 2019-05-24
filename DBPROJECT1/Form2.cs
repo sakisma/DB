@@ -62,8 +62,7 @@ namespace DBPROJECT1
 
                 fpaCalc += timh * posothta * fpa;
                 sum += timh * posothta;
-                total = sum + fpaCalc;
-              
+                total = sum + fpaCalc; 
             }
             label4.Text = total.ToString("F2");
         }

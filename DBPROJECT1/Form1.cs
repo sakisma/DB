@@ -39,6 +39,12 @@ namespace DBPROJECT1
             MessageBox.Show("Information Updated");
         }
 
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+            frm.Show();
+        }
+
         private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
             cmdbl = new SqlCommandBuilder(da1);
