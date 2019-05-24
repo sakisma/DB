@@ -68,7 +68,7 @@ namespace DBPROJECT1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-           // fillDataSet();
+            fillDataSet();
         }
     }
 }
