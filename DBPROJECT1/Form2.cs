@@ -15,8 +15,6 @@ namespace DBPROJECT1
         SqlConnection connect;
         SqlDataAdapter d1, d2, d3, d4;
         DataSet ds1, ds2, ds3, ds4;
-
-    
         BindingSource b1, b2, b3, b4;
         public Form2()
         {
@@ -28,7 +26,6 @@ namespace DBPROJECT1
             d1.Fill(dt1);
             comboBox1.DataSource = dt1;
             comboBox1.DisplayMember = "EPONYMIA";
-             
         }
 
         public void fillDataSet()
@@ -51,10 +48,6 @@ namespace DBPROJECT1
             double fpaCalc = 0;
             for(int i=0; i < dataGridView1.Rows.Count; i++)
             {
-               // sum = sum + Convert.ToSingle(dataGridView1.Rows[i].Cells[4].Value)+ 
-                 //      Convert.ToSingle(dataGridView1.Rows[i].Cells[4].Value)*
-                   //    Convert.ToSingle(dataGridView1.Rows[i].Cells[6].Value)*
-                     //  (Convert.ToSingle(dataGridView1.Rows[i].Cells[5].Value)/100);
 
                 double timh = Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value);
                 double posothta = Convert.ToDouble(dataGridView1.Rows[i].Cells[6].Value);
