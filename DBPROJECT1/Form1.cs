@@ -16,6 +16,7 @@ namespace DBPROJECT1
         SqlConnection conn;
         SqlDataAdapter da1, da2, da3, da4;
         DataSet ds1, ds2, ds3, ds4;
+        BindingSource b1, b2, b3, b4;
         SqlCommandBuilder cmdbl;
 
         private void SaveToolStripButton1_Click(object sender, EventArgs e)
@@ -58,7 +59,6 @@ namespace DBPROJECT1
             frm.Show();
         }
 
-        BindingSource b1, b2, b3, b4;
 
 
         private void Form1_Load(object sender, EventArgs e)
