@@ -46,16 +46,26 @@ namespace DBPROJECT1
             d2.Fill(ds2);
             DataTable dt = new DataTable();
             dataGridView1.DataSource = ds2.Tables[0].DefaultView;
-            float sum = 0;
-            for(int i=0; i < dataGridView1.RowCount; i++)
+            double sum = 0;
+            double total = 0;
+            double fpaCalc = 0;
+            for(int i=0; i < dataGridView1.Rows.Count; i++)
             {
-                sum += Convert.ToSingle(dataGridView1.Rows[i].Cells[4].Value)+ 
-                       Convert.ToSingle(dataGridView1.Rows[i].Cells[4].Value)*
-                       (Convert.ToSingle(dataGridView1.Rows[i].Cells[6].Value)*
-                       Convert.ToSingle(dataGridView1.Rows[i].Cells[5].Value));
-                
+               // sum = sum + Convert.ToSingle(dataGridView1.Rows[i].Cells[4].Value)+ 
+                 //      Convert.ToSingle(dataGridView1.Rows[i].Cells[4].Value)*
+                   //    Convert.ToSingle(dataGridView1.Rows[i].Cells[6].Value)*
+                     //  (Convert.ToSingle(dataGridView1.Rows[i].Cells[5].Value)/100);
+
+                double timh = Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value);
+                double posothta = Convert.ToDouble(dataGridView1.Rows[i].Cells[6].Value);
+                double fpa = Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value) / 100;
+
+                fpaCalc += timh * posothta * fpa;
+                sum += timh * posothta;
+                total = sum + fpaCalc;
+              
             }
-            label4.Text = sum.ToString();
+            label4.Text = total.ToString("F2");
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,7 +76,7 @@ namespace DBPROJECT1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            fillDataSet();
+           // fillDataSet();
         }
     }
 }
