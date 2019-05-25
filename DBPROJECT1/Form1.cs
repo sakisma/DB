@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.IO;
 namespace DBPROJECT1
 {
     public partial class Form1 : Form
@@ -18,12 +18,32 @@ namespace DBPROJECT1
         DataSet ds1, ds2, ds3, ds4;
         BindingSource b1, b2, b3, b4;
         SqlCommandBuilder cmdbl;
+        SqlCommand command;
 
         private void SaveToolStripButton1_Click(object sender, EventArgs e)
         {
             cmdbl = new SqlCommandBuilder(da2);
             da2.Update(ds2, "Paragelia_table");
             MessageBox.Show("Information Updated");
+        }
+
+        private void BindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+            refreshImage();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            String openPath;
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                openPath = openFileDialog1.InitialDirectory +
+                    openFileDialog1.FileName;
+                textBox12.Text = openPath;
+                pictureBox1.Image = Image.FromFile(openPath);
+                command = new SqlCommand("update PELATHS set FOTO = '" + openPath + "' where KOD_PELATH=" + textBox1.Text + ";", conn);
+                command.ExecuteNonQuery();
+            }
         }
 
         private void SaveToolStripButton2_Click(object sender, EventArgs e)
@@ -119,6 +139,7 @@ namespace DBPROJECT1
             textBox26.DataBindings.Add(new Binding("Text", b4, "K_E", true));
             textBox27.DataBindings.Add(new Binding("Text", b4, "POSOTHTA", true));
             bindingNavigator4.BindingSource = b4;
+            refreshImage();
         }
 
 
@@ -128,6 +149,20 @@ namespace DBPROJECT1
             InitializeComponent();
             conn = new SqlConnection(@"Data Source=DESKTOP-RM0NF38;Initial Catalog=APOTHIKI_4293;Integrated Security=True");
             conn.Open();
+        }
+
+
+        public void refreshImage()
+        {
+            String photoPath = textBox12.Text.Trim();
+            if(photoPath != null && File.Exists(photoPath))
+            {
+                pictureBox1.Image = Image.FromFile(photoPath);
+            }
+            else
+            {
+                pictureBox1.Image = Image.FromFile("C:/Users/sakis/Pictures/Null.jpg");
+            }
         }
 
         private void Label16_Click(object sender, EventArgs e)
