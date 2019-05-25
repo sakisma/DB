@@ -18,7 +18,7 @@ namespace DBPROJECT1
         DataSet ds1, ds2, ds3, ds4;
         BindingSource b1, b2, b3, b4;
         SqlCommandBuilder cmdbl;
-        SqlCommand command;
+        SqlCommand command,command1;
 
         private void SaveToolStripButton1_Click(object sender, EventArgs e)
         {
@@ -51,6 +51,25 @@ namespace DBPROJECT1
             cmdbl = new SqlCommandBuilder(da3);
             da3.Update(ds3, "Apothiki_table");
             MessageBox.Show("Information Updated");
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            String openPath;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                openPath = openFileDialog1.InitialDirectory +
+                    openFileDialog1.FileName;
+                textBox28.Text = openPath;
+                pictureBox2.Image = Image.FromFile(openPath);
+                command = new SqlCommand("update APOTHIKI set FOTO = '" + openPath + "' where KE=" + textBox19.Text + ";", conn);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private void BindingNavigator3_RefreshItems(object sender, EventArgs e)
+        {
+            refreshImage2();
         }
 
         private void SaveToolStripButton3_Click(object sender, EventArgs e)
@@ -140,6 +159,7 @@ namespace DBPROJECT1
             textBox27.DataBindings.Add(new Binding("Text", b4, "POSOTHTA", true));
             bindingNavigator4.BindingSource = b4;
             refreshImage();
+            refreshImage2();
         }
 
 
@@ -162,6 +182,20 @@ namespace DBPROJECT1
             else
             {
                 pictureBox1.Image = Image.FromFile("C:/Users/sakis/Pictures/Null.jpg");
+            }
+        }
+
+
+        public void refreshImage2()
+        {
+            String photoPath = textBox28.Text.Trim();
+            if (photoPath != null && File.Exists(photoPath))
+            {
+                pictureBox2.Image = Image.FromFile(photoPath);
+            }
+            else
+            {
+                pictureBox2.Image = Image.FromFile("C:/Users/sakis/Pictures/Null.jpg");
             }
         }
 
