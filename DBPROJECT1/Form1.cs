@@ -41,7 +41,7 @@ namespace DBPROJECT1
                     openFileDialog1.FileName;
                 textBox12.Text = openPath;
                 pictureBox1.Image = Image.FromFile(openPath);
-                command = new SqlCommand("update PELATHS set FOTO = '" + openPath + "' where KOD_PELATH=" + textBox1.Text + ";", conn);
+                command = new SqlCommand("update PELATHS set FOTO = '" + openPath + "' where KOD_PELATH= " + textBox1.Text + ";", conn);
                 command.ExecuteNonQuery();
             }
         }
@@ -56,13 +56,13 @@ namespace DBPROJECT1
         private void Button4_Click(object sender, EventArgs e)
         {
             String openPath;
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
-                openPath = openFileDialog1.InitialDirectory +
-                    openFileDialog1.FileName;
+                openPath = openFileDialog2.InitialDirectory +
+                    openFileDialog2.FileName;
                 textBox28.Text = openPath;
                 pictureBox2.Image = Image.FromFile(openPath);
-                command = new SqlCommand("update APOTHIKI set FOTO = '" + openPath + "' where KE=" + textBox19.Text + ";", conn);
+                command = new SqlCommand("update APOTHIKI set PHOTO = '" + openPath + "' where KE= " + textBox19.Text + ";", conn); ;
                 command.ExecuteNonQuery();
             }
         }
