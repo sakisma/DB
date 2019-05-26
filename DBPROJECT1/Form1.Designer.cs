@@ -83,17 +83,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem2 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMovePreviousItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorPositionItem2 = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem2 = new System.Windows.Forms.ToolStripButton();
@@ -109,6 +106,9 @@
             this.pasteToolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -692,11 +692,11 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.pictureBox2);
+            this.tabPage3.Controls.Add(this.bindingNavigator3);
+            this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.textBox28);
             this.tabPage3.Controls.Add(this.label28);
-            this.tabPage3.Controls.Add(this.bindingNavigator3);
             this.tabPage3.Controls.Add(this.textBox24);
             this.tabPage3.Controls.Add(this.textBox23);
             this.tabPage3.Controls.Add(this.textBox22);
@@ -717,40 +717,14 @@
             this.tabPage3.Text = "APOTHIKI";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(687, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Find photo";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
-            // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(393, 74);
+            this.pictureBox2.Location = new System.Drawing.Point(395, 100);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(463, 254);
+            this.pictureBox2.Size = new System.Drawing.Size(422, 216);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(462, 18);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 20);
-            this.textBox28.TabIndex = 14;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(381, 21);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(36, 13);
-            this.label28.TabIndex = 13;
-            this.label28.Text = "FOTO";
             // 
             // bindingNavigator3
             // 
@@ -760,8 +734,8 @@
             this.bindingNavigator3.Dock = System.Windows.Forms.DockStyle.None;
             this.bindingNavigator3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem2,
-            this.bindingNavigatorMovePreviousItem2,
             this.bindingNavigatorSeparator6,
+            this.bindingNavigatorMovePreviousItem2,
             this.bindingNavigatorPositionItem2,
             this.bindingNavigatorCountItem2,
             this.bindingNavigatorSeparator7,
@@ -780,7 +754,7 @@
             this.pasteToolStripButton2,
             this.toolStripSeparator5,
             this.helpToolStripButton2});
-            this.bindingNavigator3.Location = new System.Drawing.Point(43, 342);
+            this.bindingNavigator3.Location = new System.Drawing.Point(14, 340);
             this.bindingNavigator3.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator3.MoveLastItem = this.bindingNavigatorMoveLastItem2;
             this.bindingNavigator3.MoveNextItem = this.bindingNavigatorMoveNextItem2;
@@ -788,7 +762,7 @@
             this.bindingNavigator3.Name = "bindingNavigator3";
             this.bindingNavigator3.PositionItem = this.bindingNavigatorPositionItem2;
             this.bindingNavigator3.Size = new System.Drawing.Size(451, 25);
-            this.bindingNavigator3.TabIndex = 12;
+            this.bindingNavigator3.TabIndex = 17;
             this.bindingNavigator3.Text = "bindingNavigator3";
             this.bindingNavigator3.RefreshItems += new System.EventHandler(this.BindingNavigator3_RefreshItems);
             // 
@@ -826,6 +800,11 @@
             this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem2.Text = "Move first";
             // 
+            // bindingNavigatorSeparator6
+            // 
+            this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
+            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
             // bindingNavigatorMovePreviousItem2
             // 
             this.bindingNavigatorMovePreviousItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -834,11 +813,6 @@
             this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem2.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator6
-            // 
-            this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
-            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem2
             // 
@@ -903,7 +877,7 @@
             this.saveToolStripButton2.Name = "saveToolStripButton2";
             this.saveToolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.saveToolStripButton2.Text = "&Save";
-            this.saveToolStripButton2.Click += new System.EventHandler(this.SaveToolStripButton2_Click);
+            this.saveToolStripButton2.Click += new System.EventHandler(this.SaveToolStripButton2_Click_1);
             // 
             // printToolStripButton2
             // 
@@ -959,6 +933,32 @@
             this.helpToolStripButton2.Name = "helpToolStripButton2";
             this.helpToolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton2.Text = "He&lp";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(687, 16);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(88, 23);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Find photo";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(462, 18);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(100, 20);
+            this.textBox28.TabIndex = 14;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(381, 21);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(36, 13);
+            this.label28.TabIndex = 13;
+            this.label28.Text = "FOTO";
             // 
             // textBox24
             // 
@@ -1788,18 +1788,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
-        private System.Windows.Forms.BindingNavigator bindingNavigator3;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem2;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem2;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem2;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem2;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem2;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator6;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem2;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator7;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem2;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem2;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator8;
         private System.Windows.Forms.BindingNavigator bindingNavigator4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem3;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem3;
@@ -1833,16 +1821,6 @@
         private System.Windows.Forms.ToolStripButton pasteToolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton helpToolStripButton1;
-        private System.Windows.Forms.ToolStripButton newToolStripButton2;
-        private System.Windows.Forms.ToolStripButton openToolStripButton2;
-        private System.Windows.Forms.ToolStripButton saveToolStripButton2;
-        private System.Windows.Forms.ToolStripButton printToolStripButton2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton cutToolStripButton2;
-        private System.Windows.Forms.ToolStripButton copyToolStripButton2;
-        private System.Windows.Forms.ToolStripButton pasteToolStripButton2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton helpToolStripButton2;
         private System.Windows.Forms.ToolStripButton newToolStripButton3;
         private System.Windows.Forms.ToolStripButton openToolStripButton3;
         private System.Windows.Forms.ToolStripButton saveToolStripButton3;
@@ -1858,10 +1836,32 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.BindingNavigator bindingNavigator3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem2;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem2;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem2;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem2;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem2;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator6;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem2;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator7;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem2;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem2;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator8;
+        private System.Windows.Forms.ToolStripButton newToolStripButton2;
+        private System.Windows.Forms.ToolStripButton openToolStripButton2;
+        private System.Windows.Forms.ToolStripButton saveToolStripButton2;
+        private System.Windows.Forms.ToolStripButton printToolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton cutToolStripButton2;
+        private System.Windows.Forms.ToolStripButton copyToolStripButton2;
+        private System.Windows.Forms.ToolStripButton pasteToolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton helpToolStripButton2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

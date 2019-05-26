@@ -18,8 +18,7 @@ namespace DBPROJECT1
         DataSet ds1, ds2, ds3, ds4;
         BindingSource b1, b2, b3, b4;
         SqlCommandBuilder cmdbl;
-        SqlCommand command,command1;
-
+        SqlCommand command;
         private void SaveToolStripButton1_Click(object sender, EventArgs e)
         {
             cmdbl = new SqlCommandBuilder(da2);
@@ -46,23 +45,16 @@ namespace DBPROJECT1
             }
         }
 
-        private void SaveToolStripButton2_Click(object sender, EventArgs e)
-        {
-            cmdbl = new SqlCommandBuilder(da3);
-            da3.Update(ds3, "Apothiki_table");
-            MessageBox.Show("Information Updated");
-        }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            String openPath;
+            String path;
             if (openFileDialog2.ShowDialog() == DialogResult.OK)
             {
-                openPath = openFileDialog2.InitialDirectory +
-                    openFileDialog2.FileName;
-                textBox28.Text = openPath;
-                pictureBox2.Image = Image.FromFile(openPath);
-                command = new SqlCommand("update APOTHIKI set PHOTO = '" + openPath + "' where KE= " + textBox19.Text + ";", conn); ;
+                path = openFileDialog2.InitialDirectory + openFileDialog2.FileName;
+                textBox28.Text = path;
+                pictureBox2.Image = Image.FromFile(path);
+                command = new SqlCommand("UPDATE APOTHIKI set PHOTO= '" + path + "'Where KE= " + textBox19.Text + ";", conn);
                 command.ExecuteNonQuery();
             }
         }
@@ -71,6 +63,14 @@ namespace DBPROJECT1
         {
             refreshImage2();
         }
+
+        private void SaveToolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            cmdbl = new SqlCommandBuilder(da3);
+            da3.Update(ds3, "Apothiki_table");
+            MessageBox.Show("Information Updated");
+        }
+
 
         private void SaveToolStripButton3_Click(object sender, EventArgs e)
         {
@@ -88,7 +88,7 @@ namespace DBPROJECT1
         private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
             cmdbl = new SqlCommandBuilder(da1);
-            da1.Update(ds1, "Pelaths_Table");
+            da1.Update(ds1,"Pelaths_Table");
             MessageBox.Show("Information Updated");
         }
 
@@ -122,7 +122,6 @@ namespace DBPROJECT1
             textBox13.DataBindings.Add(new Binding("Text", b1, "SXOLIA", true));
             bindingNavigator1.BindingSource = b1;
 
-
             da2 = new SqlDataAdapter("Select * from PARAGELIA", conn);
             ds2 = new DataSet();
             da2.Fill(ds2,"Paragelia_table");
@@ -147,7 +146,9 @@ namespace DBPROJECT1
             textBox22.DataBindings.Add(new Binding("Text", b3, "APOTHEMA", true));
             textBox23.DataBindings.Add(new Binding("Text", b3, "TIMH_POLHSHS", true));
             textBox24.DataBindings.Add(new Binding("Text", b3, "FPA", true));
+            textBox28.DataBindings.Add(new Binding("Text", b3, "PHOTO", true));
             bindingNavigator3.BindingSource = b3;
+
 
             da4 = new SqlDataAdapter("Select * from PROIONTA_PARAGELIAS", conn);
             ds4 = new DataSet();
@@ -158,6 +159,7 @@ namespace DBPROJECT1
             textBox26.DataBindings.Add(new Binding("Text", b4, "K_E", true));
             textBox27.DataBindings.Add(new Binding("Text", b4, "POSOTHTA", true));
             bindingNavigator4.BindingSource = b4;
+
             refreshImage();
             refreshImage2();
         }
