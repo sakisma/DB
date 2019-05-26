@@ -99,6 +99,7 @@ namespace DBPROJECT1
             cmdbl = new SqlCommandBuilder(da1);
             da1.Update(ds1,"Pelaths_Table");
             MessageBox.Show("Information Updated");
+            
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -107,13 +108,11 @@ namespace DBPROJECT1
             frm.Show();
         }
 
-
-
-        private void Form1_Load(object sender, EventArgs e)
+        public void fillDataPelaths()
         {
             da1 = new SqlDataAdapter("Select * from PELATHS", conn);
             ds1 = new DataSet();
-            da1.Fill(ds1,"Pelaths_Table");
+            da1.Fill(ds1, "Pelaths_Table");
             b1 = new BindingSource();
             b1.DataSource = ds1.Tables[0].DefaultView;
             textBox1.DataBindings.Add(new Binding("Text", b1, "KOD_PELATH", true));
@@ -130,10 +129,13 @@ namespace DBPROJECT1
             textBox12.DataBindings.Add(new Binding("Text", b1, "FOTO", true));
             textBox13.DataBindings.Add(new Binding("Text", b1, "SXOLIA", true));
             bindingNavigator1.BindingSource = b1;
+        }
 
+        public void fillDataParagelia()
+        {
             da2 = new SqlDataAdapter("Select * from PARAGELIA", conn);
             ds2 = new DataSet();
-            da2.Fill(ds2,"Paragelia_table");
+            da2.Fill(ds2, "Paragelia_table");
             b2 = new BindingSource();
             b2.DataSource = ds2.Tables[0].DefaultView;
             textBox14.DataBindings.Add(new Binding("Text", b2, "KOD_PAR", true));
@@ -142,8 +144,10 @@ namespace DBPROJECT1
             textBox17.DataBindings.Add(new Binding("Text", b2, "TROPOS_PLHROMHS", true));
             textBox18.DataBindings.Add(new Binding("Text", b2, "TOPOS_PARADOSHS", true));
             bindingNavigator2.BindingSource = b2;
+        }
 
-
+        public void fillDataApothiki()
+        {
             da3 = new SqlDataAdapter("Select * from APOTHIKI", conn);
             ds3 = new DataSet();
             da3.Fill(ds3, "Apothiki_table");
@@ -157,8 +161,10 @@ namespace DBPROJECT1
             textBox24.DataBindings.Add(new Binding("Text", b3, "FPA", true));
             textBox28.DataBindings.Add(new Binding("Text", b3, "PHOTO", true));
             bindingNavigator3.BindingSource = b3;
+        }
 
-
+        public void fillDataProiontaParagelias()
+        {
             da4 = new SqlDataAdapter("Select * from PROIONTA_PARAGELIAS", conn);
             ds4 = new DataSet();
             da4.Fill(ds4, "PROIONTA_PARAGELIAS_TABLE");
@@ -168,8 +174,15 @@ namespace DBPROJECT1
             textBox26.DataBindings.Add(new Binding("Text", b4, "K_E", true));
             textBox27.DataBindings.Add(new Binding("Text", b4, "POSOTHTA", true));
             bindingNavigator4.BindingSource = b4;
-            refreshImage();
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            fillDataPelaths();
+            fillDataParagelia();
+            fillDataApothiki();
+            fillDataProiontaParagelias();
+            refreshImage();
         }
 
 
