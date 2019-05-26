@@ -19,6 +19,7 @@ namespace DBPROJECT1
         BindingSource b1, b2, b3, b4;
         SqlCommandBuilder cmdbl;
         SqlCommand command,command1;
+
         private void SaveToolStripButton1_Click(object sender, EventArgs e)
         {
             cmdbl = new SqlCommandBuilder(da2);
@@ -183,8 +184,6 @@ namespace DBPROJECT1
             fillDataProiontaParagelias();
             refreshImage();
         }
-
-
 
         public Form1()
         {
