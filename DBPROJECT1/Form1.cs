@@ -49,7 +49,7 @@ namespace DBPROJECT1
         private void Button4_Click(object sender, EventArgs e)
         {
             String path;
-            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            if(openFileDialog2.ShowDialog() == DialogResult.OK)
             {
                 path = openFileDialog2.InitialDirectory + openFileDialog2.FileName;
                 textBox28.Text = path;
@@ -185,7 +185,6 @@ namespace DBPROJECT1
             {
                 pictureBox1.Image = Image.FromFile(photoPath);
             }
-            
             else
             {
                 pictureBox1.Image = Image.FromFile("C:/Users/sakis/Pictures/Null.jpg");
