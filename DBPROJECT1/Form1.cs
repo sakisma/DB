@@ -71,6 +71,10 @@ namespace DBPROJECT1
             MessageBox.Show("Information Updated");
         }
 
+        private void TabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void SaveToolStripButton3_Click(object sender, EventArgs e)
         {
@@ -137,8 +141,8 @@ namespace DBPROJECT1
 
             da3 = new SqlDataAdapter("Select * from APOTHIKI", conn);
             ds3 = new DataSet();
-            b3 = new BindingSource();
             da3.Fill(ds3, "Apothiki_table");
+            b3 = new BindingSource();
             b3.DataSource = ds3.Tables[0].DefaultView;
             textBox19.DataBindings.Add(new Binding("Text", b3, "KE", true));
             textBox20.DataBindings.Add(new Binding("Text", b3, "EIDOS", true));
@@ -181,6 +185,7 @@ namespace DBPROJECT1
             {
                 pictureBox1.Image = Image.FromFile(photoPath);
             }
+            
             else
             {
                 pictureBox1.Image = Image.FromFile("C:/Users/sakis/Pictures/Null.jpg");

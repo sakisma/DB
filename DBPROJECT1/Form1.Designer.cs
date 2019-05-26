@@ -210,7 +210,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(882, 406);
@@ -254,6 +254,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "PELATHS";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
             // 
             // button3
             // 
@@ -491,7 +492,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(335, 215);
+            this.textBox12.Location = new System.Drawing.Point(324, 222);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(100, 20);
             this.textBox12.TabIndex = 13;
@@ -1639,9 +1640,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 414);
+            this.button1.Location = new System.Drawing.Point(23, 415);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 61);
+            this.button1.Size = new System.Drawing.Size(160, 46);
             this.button1.TabIndex = 1;
             this.button1.Text = "form2";
             this.button1.UseVisualStyleBackColor = true;
@@ -1649,9 +1650,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(212, 415);
+            this.button2.Location = new System.Drawing.Point(245, 411);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 61);
+            this.button2.Size = new System.Drawing.Size(195, 50);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -1669,7 +1670,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 488);
+            this.ClientSize = new System.Drawing.Size(910, 501);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
