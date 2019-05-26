@@ -219,6 +219,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Teal;
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.bindingNavigator1);
@@ -254,7 +255,6 @@
             this.tabPage1.Size = new System.Drawing.Size(874, 380);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "PELATHS";
-            this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
             // 
             // button3
@@ -664,6 +664,7 @@
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "ONOMA";
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // label3
             // 
@@ -673,6 +674,7 @@
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "EPITHETO";
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label2
             // 
@@ -682,6 +684,7 @@
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "EPONYMIA";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label1
             // 
@@ -691,9 +694,11 @@
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "KOD_PELATH";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Teal;
             this.tabPage3.Controls.Add(this.pictureBox2);
             this.tabPage3.Controls.Add(this.bindingNavigator3);
             this.tabPage3.Controls.Add(this.button4);
@@ -717,7 +722,6 @@
             this.tabPage3.Size = new System.Drawing.Size(874, 380);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "APOTHIKI";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -1060,6 +1064,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Teal;
             this.tabPage2.Controls.Add(this.bindingNavigator2);
             this.tabPage2.Controls.Add(this.textBox18);
             this.tabPage2.Controls.Add(this.textBox17);
@@ -1077,7 +1082,6 @@
             this.tabPage2.Size = new System.Drawing.Size(874, 380);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PARAGELIA";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // bindingNavigator2
             // 
@@ -1369,6 +1373,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.Teal;
             this.tabPage4.Controls.Add(this.bindingNavigator4);
             this.tabPage4.Controls.Add(this.textBox27);
             this.tabPage4.Controls.Add(this.textBox26);
@@ -1382,7 +1387,6 @@
             this.tabPage4.Size = new System.Drawing.Size(874, 380);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "PROIONTA_PARAGELIAS";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // bindingNavigator4
             // 
@@ -1645,17 +1649,17 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 46);
             this.button1.TabIndex = 1;
-            this.button1.Text = "form2";
+            this.button1.Text = "ISTORIKO PARAGELIWN";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(245, 411);
+            this.button2.Location = new System.Drawing.Point(222, 415);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 50);
+            this.button2.Size = new System.Drawing.Size(195, 46);
             this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
+            this.button2.Text = "ISTORIKO KINHSHS PROIONTON";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
@@ -1671,6 +1675,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(910, 501);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

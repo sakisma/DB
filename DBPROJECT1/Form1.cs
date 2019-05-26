@@ -102,6 +102,26 @@ namespace DBPROJECT1
             MessageBox.Show("Information Updated");
         }
 
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Button1_Click(object sender, EventArgs e)
         {
             Form2 frm = new Form2();
