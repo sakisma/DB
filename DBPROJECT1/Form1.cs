@@ -18,7 +18,7 @@ namespace DBPROJECT1
         DataSet ds1, ds2, ds3, ds4;
         BindingSource b1, b2, b3, b4;
         SqlCommandBuilder cmdbl;
-        SqlCommand command;
+        SqlCommand command,command1;
         private void SaveToolStripButton1_Click(object sender, EventArgs e)
         {
             cmdbl = new SqlCommandBuilder(da2);
@@ -40,7 +40,7 @@ namespace DBPROJECT1
                     openFileDialog1.FileName;
                 textBox12.Text = openPath;
                 pictureBox1.Image = Image.FromFile(openPath);
-                command = new SqlCommand("update PELATHS set FOTO = '" + openPath + "' where KOD_PELATH= " + textBox1.Text + ";", conn);
+                command = new SqlCommand("update PELATHS set FOTO = '" + openPath + "' where KOD_PELATH=" + textBox1.Text + ";", conn);
                 command.ExecuteNonQuery();
             }
         }
@@ -54,8 +54,8 @@ namespace DBPROJECT1
                 path = openFileDialog2.InitialDirectory + openFileDialog2.FileName;
                 textBox28.Text = path;
                 pictureBox2.Image = Image.FromFile(path);
-                command = new SqlCommand("UPDATE APOTHIKI set PHOTO= '" + path + "'Where KE= " + textBox19.Text + ";", conn);
-                command.ExecuteNonQuery();
+                command1 = new SqlCommand("UPDATE APOTHIKI set PHOTO = '" + path + "' where KE= " + textBox19.Text + ";", conn);
+                command1.ExecuteNonQuery();
             }
         }
 
@@ -69,6 +69,11 @@ namespace DBPROJECT1
             cmdbl = new SqlCommandBuilder(da3);
             da3.Update(ds3, "Apothiki_table");
             MessageBox.Show("Information Updated");
+        }
+
+        private void TabControl1_Click(object sender, EventArgs e)
+        {
+            refreshImage2();
         }
 
         private void TabPage1_Click(object sender, EventArgs e)
@@ -163,9 +168,8 @@ namespace DBPROJECT1
             textBox26.DataBindings.Add(new Binding("Text", b4, "K_E", true));
             textBox27.DataBindings.Add(new Binding("Text", b4, "POSOTHTA", true));
             bindingNavigator4.BindingSource = b4;
-
             refreshImage();
-            refreshImage2();
+
         }
 
 
@@ -194,10 +198,10 @@ namespace DBPROJECT1
 
         public void refreshImage2()
         {
-            String photoPath = textBox28.Text.Trim();
-            if (photoPath != null && File.Exists(photoPath))
+            String photoPath2 = textBox28.Text.Trim();
+            if (photoPath2 != null && File.Exists(photoPath2))
             {
-                pictureBox2.Image = Image.FromFile(photoPath);
+                pictureBox2.Image = Image.FromFile(photoPath2);
             }
             else
             {
