@@ -99,7 +99,6 @@ namespace DBPROJECT1
             cmdbl = new SqlCommandBuilder(da1);
             da1.Update(ds1,"Pelaths_Table");
             MessageBox.Show("Information Updated");
-            
         }
 
         private void Button1_Click(object sender, EventArgs e)
