@@ -35,7 +35,7 @@ namespace DBPROJECT1
         }
         public void fillDataSet()
         {
-            d2 = new SqlDataAdapter("Select HMER_PARAGELIAS, K_PAR, EIDOS, KATHGORIA, TIMH_POLHSHS, FPA, POSOTHTA "
+            d2 = new SqlDataAdapter("Select EPONYMIA,HMER_PARAGELIAS, K_PAR, EIDOS, KATHGORIA, TIMH_POLHSHS, FPA, POSOTHTA "
                                     +
                 "FROM PELATHS inner join PARAGELIA inner join PROIONTA_PARAGELIAS " +
 
@@ -54,9 +54,9 @@ namespace DBPROJECT1
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
 
-                double timh = Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value);
-                double posothta = Convert.ToDouble(dataGridView1.Rows[i].Cells[6].Value);
-                double fpa = Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value) / 100;
+                double timh = Convert.ToDouble(dataGridView1.Rows[i].Cells[5].Value);
+                double posothta = Convert.ToDouble(dataGridView1.Rows[i].Cells[7].Value);
+                double fpa = Convert.ToDouble(dataGridView1.Rows[i].Cells[6].Value) / 100;
 
                 fpaCalc += timh * posothta * fpa;
                 sum += timh * posothta;

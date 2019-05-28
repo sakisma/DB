@@ -63,7 +63,6 @@ namespace DBPROJECT1
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             fillDataSet();
-            //SAVVA GAMIESAI
         }
 
         private void Form2_Load(object sender, EventArgs e)
