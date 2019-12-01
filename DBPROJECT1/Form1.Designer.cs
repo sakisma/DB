@@ -254,7 +254,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(874, 380);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "PELATHS";
+            this.tabPage1.Text = "Customer";
             this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
             // 
             // button3
@@ -368,6 +368,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -580,9 +581,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(531, 135);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 13);
+            this.label13.Size = new System.Drawing.Size(56, 13);
             this.label13.TabIndex = 12;
-            this.label13.Text = "SXOLIA";
+            this.label13.Text = "Comments";
             // 
             // label12
             // 
@@ -596,29 +597,29 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(548, 96);
+            this.label11.Location = new System.Drawing.Point(498, 99);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(28, 13);
+            this.label11.Size = new System.Drawing.Size(78, 13);
             this.label11.TabIndex = 10;
-            this.label11.Text = "THL";
+            this.label11.Text = "Phone Number";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(540, 63);
+            this.label10.Location = new System.Drawing.Point(552, 63);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 13);
+            this.label10.Size = new System.Drawing.Size(24, 13);
             this.label10.TabIndex = 9;
-            this.label10.Text = "POLH";
+            this.label10.Text = "City";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(517, 24);
+            this.label9.Location = new System.Drawing.Point(531, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 13);
+            this.label9.Size = new System.Drawing.Size(45, 13);
             this.label9.TabIndex = 8;
-            this.label9.Text = "DIEYTHINSI";
+            this.label9.Text = "Address";
             // 
             // label8
             // 
@@ -643,47 +644,47 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(271, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "HLIKIA";
+            this.label6.Text = "Age";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(235, 24);
+            this.label5.Location = new System.Drawing.Point(262, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "HM_GENHSHS";
+            this.label5.Text = "Birthday";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(18, 139);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "ONOMA";
+            this.label4.Text = "NAME";
             this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 106);
+            this.label3.Location = new System.Drawing.Point(18, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "EPITHETO";
+            this.label3.Text = "LastName";
             this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 67);
+            this.label2.Location = new System.Drawing.Point(18, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "EPONYMIA";
+            this.label2.Text = "Brand Name";
             this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label1
@@ -691,9 +692,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "KOD_PELATH";
+            this.label1.Text = "CustomerID";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // tabPage3
@@ -721,7 +722,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(874, 380);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "APOTHIKI";
+            this.tabPage3.Text = "Warehouse";
             // 
             // pictureBox2
             // 
@@ -824,6 +825,7 @@
             // 
             this.bindingNavigatorPositionItem2.AccessibleName = "Position";
             this.bindingNavigatorPositionItem2.AutoSize = false;
+            this.bindingNavigatorPositionItem2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem2.Name = "bindingNavigatorPositionItem2";
             this.bindingNavigatorPositionItem2.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem2.Text = "0";
@@ -962,9 +964,9 @@
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(381, 21);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(36, 13);
+            this.label28.Size = new System.Drawing.Size(75, 13);
             this.label28.TabIndex = 13;
-            this.label28.Text = "FOTO";
+            this.label28.Text = "Product Photo";
             // 
             // textBox24
             // 
@@ -1013,54 +1015,54 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(40, 251);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(27, 13);
+            this.label24.Size = new System.Drawing.Size(28, 13);
             this.label24.TabIndex = 5;
-            this.label24.Text = "FPA";
+            this.label24.Text = "VAT";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(40, 215);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(91, 13);
+            this.label23.Size = new System.Drawing.Size(31, 13);
             this.label23.TabIndex = 4;
-            this.label23.Text = "TIMH_POLHSHS";
+            this.label23.Text = "Price";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(40, 174);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(67, 13);
+            this.label22.Size = new System.Drawing.Size(35, 13);
             this.label22.TabIndex = 3;
-            this.label22.Text = "APOTHEMA";
+            this.label22.Text = "Stock";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(40, 121);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(70, 13);
+            this.label21.Size = new System.Drawing.Size(49, 13);
             this.label21.TabIndex = 2;
-            this.label21.Text = "KATHGORIA";
+            this.label21.Text = "Category";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(40, 65);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(40, 13);
+            this.label20.Size = new System.Drawing.Size(71, 13);
             this.label20.TabIndex = 1;
-            this.label20.Text = "EIDOS";
+            this.label20.Text = "Product Type";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(40, 18);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(21, 13);
+            this.label19.Size = new System.Drawing.Size(81, 13);
             this.label19.TabIndex = 0;
-            this.label19.Text = "KE";
+            this.label19.Text = "Product type ID";
             // 
             // tabPage2
             // 
@@ -1081,7 +1083,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(874, 380);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "PARAGELIA";
+            this.tabPage2.Text = "Order";
             // 
             // bindingNavigator2
             // 
@@ -1174,6 +1176,7 @@
             // 
             this.bindingNavigatorPositionItem1.AccessibleName = "Position";
             this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
             this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem1.Text = "0";
@@ -1330,46 +1333,46 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(34, 245);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(117, 13);
+            this.label18.Size = new System.Drawing.Size(75, 13);
             this.label18.TabIndex = 4;
-            this.label18.Text = "TOPOS_PARADOSHS";
+            this.label18.Text = "Delivery Place";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(34, 190);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 13);
+            this.label17.Size = new System.Drawing.Size(86, 13);
             this.label17.TabIndex = 3;
-            this.label17.Text = "TROPOS_PLHROMHS";
+            this.label17.Text = "Payment method";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(34, 148);
+            this.label16.Location = new System.Drawing.Point(38, 148);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 13);
+            this.label16.Size = new System.Drawing.Size(65, 13);
             this.label16.TabIndex = 2;
-            this.label16.Text = "K_PEL";
+            this.label16.Text = "Customer ID";
             this.label16.Click += new System.EventHandler(this.Label16_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(34, 104);
+            this.label15.Location = new System.Drawing.Point(34, 90);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(112, 13);
+            this.label15.Size = new System.Drawing.Size(69, 13);
             this.label15.TabIndex = 1;
-            this.label15.Text = "HMER_PARAGELIAS";
+            this.label15.Text = "Day Of Order";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(34, 33);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 13);
+            this.label14.Size = new System.Drawing.Size(63, 13);
             this.label14.TabIndex = 0;
-            this.label14.Text = "KOD_PAR";
+            this.label14.Text = "ID_ORDER";
             // 
             // tabPage4
             // 
@@ -1386,7 +1389,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(874, 380);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "PROIONTA_PARAGELIAS";
+            this.tabPage4.Text = "Products order";
             // 
             // bindingNavigator4
             // 
@@ -1479,6 +1482,7 @@
             // 
             this.bindingNavigatorPositionItem3.AccessibleName = "Position";
             this.bindingNavigatorPositionItem3.AutoSize = false;
+            this.bindingNavigatorPositionItem3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem3.Name = "bindingNavigatorPositionItem3";
             this.bindingNavigatorPositionItem3.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem3.Text = "0";
@@ -1619,29 +1623,29 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(43, 178);
+            this.label27.Location = new System.Drawing.Point(81, 185);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(66, 13);
+            this.label27.Size = new System.Drawing.Size(46, 13);
             this.label27.TabIndex = 2;
-            this.label27.Text = "POSOTHTA";
+            this.label27.Text = "Quantity";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(43, 106);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(27, 13);
+            this.label26.Size = new System.Drawing.Size(84, 13);
             this.label26.TabIndex = 1;
-            this.label26.Text = "K_E";
+            this.label26.Text = "ID product Type";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(43, 39);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(42, 13);
+            this.label25.Size = new System.Drawing.Size(47, 13);
             this.label25.TabIndex = 0;
-            this.label25.Text = "K_PAR";
+            this.label25.Text = "ID Order";
             // 
             // button1
             // 
@@ -1649,7 +1653,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 46);
             this.button1.TabIndex = 1;
-            this.button1.Text = "ISTORIKO PARAGELIWN";
+            this.button1.Text = "Order History";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
